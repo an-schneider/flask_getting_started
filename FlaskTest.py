@@ -51,5 +51,4 @@ def distance():
     result = {"distance": total_distance,
               "a": point_a,
               "b": point_b}
-
     return jsonify(result)
