@@ -45,7 +45,7 @@ def distance():
     xdis = abs(xa-xb)
     ydis = abs(ya-yb)
 
-    total_distance = (xdis + ydis)**(1/2)
+    total_distance = (xdis**2 + ydis**2)**(1/2)
     result = {"distance": total_distance,
               "a": point_a,
               "b": point_b}
