@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 my_name = {"name": "Anthony Schneider"}
 
+
 @app.route("/name", methods=["GET"])
 def name():
     """
