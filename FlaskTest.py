@@ -31,7 +31,8 @@ def message():
 def distance():
     """
     Calculates the distance between two input points
-    :return: result json file containing the input points and distance between them
+    :return: result json file containing the input points
+    and distance between them
     """
     r = request.get_json()
 
@@ -52,4 +53,3 @@ def distance():
               "b": point_b}
 
     return jsonify(result)
-
