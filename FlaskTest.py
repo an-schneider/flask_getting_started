@@ -6,13 +6,18 @@ my_name = {"name": "Anthony Schneider"}
 
 @app.route("/name", methods=["GET"])
 def name():
+    """
+    Returns JSON containing user's name
+    :return: my_name
+    """
     return jsonify(my_name)
 
 
 @app.route("/hello/name", methods=["GET"])
 def message():
     """
-    Returns the data dictionary below to the caller as JSON
+    Returns message to the user
+    :return: my_message
     """
     my_message = {
         "message": "Hello there, %s" % my_name["name"]
@@ -23,6 +28,9 @@ def message():
 
 @app.route("/distance", methods=["POST"])
 def distance():
+    """
+    Calculates the distance between two input points
+    :return: result json file containing the input points and distance between them
     r = request.get_json()
 
     point_a = r["a"]
